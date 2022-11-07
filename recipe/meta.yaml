@@ -26,14 +26,17 @@ requirements:
     - cffi >=1.0.0
 
 test:
+  source_files:
+    - tests
   requires:
     - python
     - pip
+    - pytest
   imports:
     - google_crc32c
-    - google_crc32c.cffi
   commands:
     - python -m pip check
+    - pytest
 
 
 about:
